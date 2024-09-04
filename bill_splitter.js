@@ -12,4 +12,10 @@ function calculatetip(billamount) {
      return tip };
 const totalbill = 100; // This is our input slot for the total bill.
 const tipamount = calculatetip(totalbill);
-console.log(`A bill with the value of $${totalbill.toFixed(2)}, the tip amount would be $${tipamount.toFixed(2)}`) //Output slot for total bill with calculated tip.
+console.log(`A bill with the value of $${totalbill.toFixed(2)}, the tip amount would be $${tipamount.toFixed(2)}`); //Output slot for total bill with calculated tip.
+
+const bills = [45, 50, 65, 75, 100]; // Array of the total bills
+const tips = bills.map(bill => calculatetip(bill)); // Array of tip amounts
+const totals = bills.map((bill, index) => bill + tips[index]); // Array of total amounts.
+console.log("Bills", bills, "Tips", tips, "Totals", totals ); // A console log output with them all together.
+
